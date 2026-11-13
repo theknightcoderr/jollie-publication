@@ -33,6 +33,12 @@ export default function App() {
     <BrowserRouter>
       <ScrollToTop />
       <div className="min-h-screen flex flex-col bg-paper text-charcoal selection:bg-burgundy/20">
+        
+        {/* Prototype Pitch Banner */}
+        <div className="bg-charcoal text-paper py-2 px-4 text-center text-xs tracking-widest uppercase font-medium">
+          Concept Prototype — Independent Project Built for Jollie Publication Internship Pitch
+        </div>
+
         <Navbar />
         
         <main className="flex-1">

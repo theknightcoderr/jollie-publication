@@ -5,7 +5,6 @@ import { Section } from '@/components/layout/Section';
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs';
 import { EditorialImage } from '@/components/shared/EditorialImage';
 import { CTASection } from '@/components/shared/CTASection';
-import { PlaceholderNotice } from '@/components/shared/PlaceholderNotice';
 import { routes } from '@/lib/routes';
 
 const ROMAN = ['I', 'II', 'III'];
@@ -31,10 +30,6 @@ export default function AboutPage() {
               <p className="text-body text-charcoal leading-relaxed max-w-prose">
                 {config.shortIntro}
               </p>
-              <PlaceholderNotice
-                title="Editable Organisational Copy"
-                message="All historical, team, and operational specifics on this page read directly from src/data/siteConfig.ts with TODO (Jollie) markers so no facts are invented."
-              />
             </div>
 
             <div className="lg:col-span-5">

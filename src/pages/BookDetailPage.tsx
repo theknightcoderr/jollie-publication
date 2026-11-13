@@ -12,7 +12,6 @@ import { Tag } from '@/components/shared/Tag';
 import { Button } from '@/components/shared/Button';
 import { EmptyState } from '@/components/shared/EmptyState';
 import { LoadingState } from '@/components/shared/LoadingState';
-import { PlaceholderNotice } from '@/components/shared/PlaceholderNotice';
 import { formatDate, formatGenreLabel } from '@/lib/format';
 import { routes } from '@/lib/routes';
 
@@ -92,7 +91,7 @@ export default function BookDetailPage() {
               <div className="flex flex-wrap items-center gap-3">
                 <Tag variant="cream">{formatGenreLabel(book.genre)}</Tag>
                 <span className="text-xs uppercase tracking-wider text-ink-soft">
-                  Mock Catalogue Record
+                  Concept Demo
                 </span>
               </div>
 
@@ -155,11 +154,6 @@ export default function BookDetailPage() {
                   </span>
                 </div>
               </div>
-
-              <PlaceholderNotice
-                title="Enquiry-Only Sample Edition"
-                message="This is a fictional sample book demonstrating Jollie’s catalogue layout. No live e-commerce or ISBN links are active in Phase 1."
-              />
 
               <div className="flex flex-wrap items-center gap-4 pt-2">
                 <Button to={routes.contact()} variant="primary" withArrow>
