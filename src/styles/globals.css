@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Brand & Accent Tokens (§5.1) */
+  --color-burgundy: #751F35;
+  --color-cream: #F1E4BC;
+  --color-gold: #D6B45C;
+  --color-charcoal: #25252A;
+  --color-orange: #F47732;
+  --color-white: #FFFFFF;
+
+  /* Derived Neutrals (§5.1) */
+  --color-paper: #FBF8F1;
+  --color-paper-deep: #F5EFE0;
+  --color-ink-soft: #4A4A52;
+  --color-line: #E4DCC8;
+}
+
+@layer base {
+  html {
+    background-color: var(--color-paper);
+    color: var(--color-charcoal);
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-charcoal);
+    line-height: 1.65;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-editorial {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 600;
+  }
+
+  /* Accessible focus ring (§5.5): 2px offset in burgundy on light */
+  *:focus-visible {
+    outline: 2px solid var(--color-burgundy);
+    outline-offset: 2px;
+  }
+
+  .dark-surface *:focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 2px;
+  }
+}
+
+/* Signature editorial rule beneath eyebrow labels (§5.9) */
+.eyebrow-rule {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 0.375rem;
+}
+
+.eyebrow-rule::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 2rem;
+  height: 1px;
+  background-color: var(--color-gold);
+}
+
+/* Honour prefers-reduced-motion (§5.8) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
